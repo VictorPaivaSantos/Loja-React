@@ -1,6 +1,11 @@
-const Carrinho = () => {
+import { useContext } from "react"
+import { CarrinhoContext } from "../components/CarrinhoContext"
+
+
+function Carrinho() {
+  const { carrinho } = useContext(CarrinhoContext)
   return (
-    <div>Carrinho</div>
+    <div>{}</div>
   )
 }
 

@@ -2,9 +2,9 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import {BiStoreAlt, BiSearch, BiCart} from "react-icons/bi"
 
-import './Cabecalho.css'
+import './Header.css'
 
-const Cabecalho = () => {
+const Header = () => {
   const [pesquisa, setPesquisa] = useState("")
   const navigate = useNavigate()
 
@@ -18,7 +18,7 @@ const Cabecalho = () => {
   }
 
   return (
-    <nav id="cabecalho">
+    <nav id="header">
         <h2>
             <Link to="/"><BiStoreAlt />Loja</Link>
         </h2>
@@ -34,10 +34,10 @@ const Cabecalho = () => {
               </button>
         </form>
         <h2>
-          <Link to="/"><BiCart /></Link>
+          <Link to="/carrinho"><BiCart /></Link>
         </h2>
     </nav>
   )
 }
 
-export default Cabecalho
+export default Header

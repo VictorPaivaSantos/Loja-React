@@ -1,0 +1,11 @@
+.info-produto {
+    padding: 40px;
+}
+
+.info-produto h1{
+    padding-bottom: 20px;
+}
+
+.info-produto img {
+    width: 50%;
+}
