@@ -7,7 +7,8 @@ import { CarrinhoContext } from "../components/CarrinhoContext"
 const Produto = () => {
     const {id} = useParams()
     const produto = produtos.find(p => p.id == id)
-    const  {addProdutoCarrinho } = useContext(CarrinhoContext)
+
+    const  { addProdutoCarrinho } = useContext(CarrinhoContext)
 
     return (
       <div>
@@ -20,7 +21,7 @@ const Produto = () => {
           <h2>{produto.preco}</h2>
           {selecao(produto)}
           <button className="botao-comprar">Comprar</button>
-          <button className="botao-add-carrinho" onClick={addProdutoCarrinho(produto.id)}>Adicionar ao carrinho</button>
+          <button className="botao-add-carrinho" type="button" onClick={() => addProdutoCarrinho(produto.id)}>Adicionar ao carrinho</button>
         </form>
       </div>
     )

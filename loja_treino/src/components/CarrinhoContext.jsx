@@ -1,8 +1,8 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useState } from "react"
 
 export const CarrinhoContext = createContext()
 
-export const CarrinhoProvider = ({ children }) => {
+export default function CarrinhoProvider ({ children }) {
 
     const [carrinho, setCarrinho] = useState([])
 
@@ -15,17 +15,28 @@ export const CarrinhoProvider = ({ children }) => {
         } else {
             item.qtd += 1
         }
-        
-        useEffect(() => {
-            setCarrinho(carrinhoAux)
-        }, [])
+        setCarrinho(carrinhoAux)
     }
 
     function removeProdutoCarrinho(id) {
+        const carrinhoAux = [...carrinho]
+        const item = carrinhoAux.find((p) => p.id == id)
+
+        if(item.qtd > 1){
+            item.qtd -= 1
+            setCarrinho(carrinhoAux)
+        } else {
+            const carrinhoFiltrado = carrinhoAux.filter(p => p.id != id)
+            setCarrinho(carrinhoFiltrado)
+        }
+    }
+
+    function limparCarrinho() {
+        setCarrinho([])
     }
 
     return (
-        <CarrinhoContext.Provider value={{ carrinho, addProdutoCarrinho, removeProdutoCarrinho}}>
+        <CarrinhoContext.Provider value={{ carrinho, addProdutoCarrinho, removeProdutoCarrinho, limparCarrinho}}>
             {children}
         </CarrinhoContext.Provider>
         )

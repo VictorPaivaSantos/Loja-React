@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
-import Navegacao from './components/Header'
+import Header from './components/Header'
 
 import './App.css'
-import { CarrinhoProvider } from './components/CarrinhoContext'
+import CarrinhoProvider from './components/CarrinhoContext'
 
 
 function App() {
@@ -10,9 +10,9 @@ function App() {
   return (
     <CarrinhoProvider>
       <div className="App">
-        <Navegacao />
+        <Header />
         <Outlet />
-    </div>
+      </div>
     </CarrinhoProvider>
   )
 }
