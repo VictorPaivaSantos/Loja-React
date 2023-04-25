@@ -1,0 +1,22 @@
+.item-carrinho {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.item-carrinho button {
+    display: flex;
+    justify-content: end;
+    height: 30px;
+    margin: 5%;
+}
+
+.item-carrinho p {
+    display: flex;
+    justify-content: end;
+    height: 30px;
+    margin: 5%;
+}
+

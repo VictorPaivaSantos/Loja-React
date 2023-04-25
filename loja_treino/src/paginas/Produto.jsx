@@ -11,14 +11,14 @@ const Produto = () => {
     const  { addProdutoCarrinho } = useContext(CarrinhoContext)
 
     return (
-      <div>
+      <div className="produto-pai">
         <div className="info-produto">
           <h1>{produto.nome}</h1>
           <img src={produto.imagem} alt={produto.nome} />
           <p>{produto.descricao}</p>
         </div>
-        <form>
-          <h2>{produto.preco}</h2>
+        <form className="form-compra">
+          <h2>R${produto.preco}</h2>
           {selecao(produto)}
           <button className="botao-comprar">Comprar</button>
           <button className="botao-add-carrinho" type="button" onClick={() => addProdutoCarrinho(produto.id)}>Adicionar ao carrinho</button>
@@ -31,7 +31,7 @@ function selecao (produto) {
   if(produto.cores.length > 0){
     return (
       <div>
-        <label htmlFor="cor">Selecione uma cor</label>
+        <label htmlFor="cor">Selecione uma cor  </label>
           <select id="cor">
               <option value="1">Branco</option>
               <option value="2">Preto</option>

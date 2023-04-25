@@ -2,6 +2,7 @@
     width: 24%;
     color: white;
     margin-bottom: 2rem;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

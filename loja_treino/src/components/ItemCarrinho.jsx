@@ -1,6 +1,7 @@
 import produtos from "../Produtos"
 import { CarrinhoContext } from "../components/CarrinhoContext"
 import { useContext } from "react"
+import './ItemCarrinho.css'
 
 const ItemCarrinho = ({id, qtd}) => {
 

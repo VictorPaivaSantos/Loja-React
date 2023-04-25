@@ -2,20 +2,21 @@ import { useContext } from "react"
 import { CarrinhoContext } from "../components/CarrinhoContext"
 import ItemCarrinho from "../components/ItemCarrinho"
 import produtos from "../Produtos"
+import './Carrinho.css'
 
 function Carrinho() {
   const { carrinho } = useContext(CarrinhoContext)
 
   if(carrinho.length > 0) {
     return (
-      <div>
+      <div className="div-pai">
         {carrinho.map(p => <ItemCarrinho key={p.id} id={p.id} qtd={p.qtd}/>)}
         <p>Total:{valorTotal()}</p>
       </div>
     )
   }else{
     return(
-      <div>
+      <div className="carrinho-vazio">
         Carrinho vazio
       </div>
     )
