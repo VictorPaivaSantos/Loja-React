@@ -1,11 +1,11 @@
 import produtos from "../Produtos"
-import { CarrinhoContext } from "../components/CarrinhoContext"
+import { CarrinhoContext } from "./CarrinhoContext"
 import { useContext } from "react"
-import './ItemCarrinho.css'
+import '../estilos/ItemCarrinho.css'
 
-const ItemCarrinho = ({id, qtd}) => {
+const ItemCarrinho = ({ id, qtd }) => {
 
-    const  { removeProdutoCarrinho } = useContext(CarrinhoContext)
+    const { removeProdutoCarrinho } = useContext(CarrinhoContext)
 
     const produto = produtos.find(p => p.id == id)
 
@@ -13,9 +13,9 @@ const ItemCarrinho = ({id, qtd}) => {
         <div className="item-carrinho">
             <img src={produto.imagem} alt={produto.nome} />
             <p>{produto.nome}</p>
-            <p><b>{"R$"+produto.preco}</b></p>
+            <p><b>{"R$" + produto.preco}</b></p>
             <p>Quantidade: {qtd}</p>
-            <p>{"R$"+produto.preco*qtd}</p>
+            <p>{"R$" + (produto.preco * qtd).toFixed(2)}</p>
             <button onClick={() => removeProdutoCarrinho(id)}>remover</button>
         </div>
     )

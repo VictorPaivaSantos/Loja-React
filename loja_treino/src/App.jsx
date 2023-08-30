@@ -1,8 +1,6 @@
 import { Outlet } from 'react-router-dom'
-import Header from './components/Header'
-
-import './App.css'
-import CarrinhoProvider from './components/CarrinhoContext'
+import Header from './componentes/Header'
+import CarrinhoProvider from './componentes/CarrinhoContext'
 
 
 function App() {

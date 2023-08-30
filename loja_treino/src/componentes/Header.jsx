@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import {BiStoreAlt, BiSearch, BiCart} from "react-icons/bi"
 
-import './Header.css'
+import '../estilos/Header.css'
 
 const Header = () => {
   const [pesquisa, setPesquisa] = useState("")

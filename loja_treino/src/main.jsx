@@ -8,7 +8,7 @@ import Pesquisa from './paginas/Pesquisa'
 import Produto from './paginas/Produto'
 import Carrinho from './paginas/Carrinho'
 
-import './index.css'
+import './estilos/index.css'
 
 
 

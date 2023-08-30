@@ -50,8 +50,10 @@
 }
 
 .form-compra button:hover {
-    background-color: #3E54AC;
+    background-color: #808083;
     color: white;
     cursor: pointer;
 }
+
+
 

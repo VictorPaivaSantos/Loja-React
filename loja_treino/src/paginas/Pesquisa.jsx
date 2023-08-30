@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom"
-import CardProduto from "../components/CardProduto"
+import CardProduto from "../componentes/CardProduto"
 import produtos from "../Produtos"
-import './Listagem.css'
+import '../estilos/Listagem.css'
 
 const Pesquisa = () => {
   const [searchParams] = useSearchParams()

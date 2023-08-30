@@ -10,7 +10,7 @@
     padding: 1rem;
     transform: scale(0.9);
     transition: all ease 0.3s;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 4px rgba(65, 62, 62, 0.4);
 }
 
 .card-produto:hover {
@@ -21,8 +21,17 @@
     width: 100%;
 }
 
+.produto-nome {
+    color: #8b8d92;
+
+}
+.produto-preco {
+    color: rgb(0, 0, 0);
+}
+
 .card-produto p {
     margin-top: 1rem;
     text-align: center;
-    color: #3E54AC;
 }
+
+

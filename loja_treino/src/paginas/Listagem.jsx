@@ -1,6 +1,6 @@
-import CardProduto from "../components/CardProduto"
+import CardProduto from "../componentes/CardProduto"
 import produtos from "../Produtos"
-import './Listagem.css'
+import '../estilos/Listagem.css'
 
 const Listagem = () => {
   return (
