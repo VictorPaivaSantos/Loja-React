@@ -9,6 +9,7 @@ export default function CarrinhoProvider({ children }) {
     function addProdutoCarrinho(id) {
         const carrinhoAux = [...carrinho]
         const item = carrinhoAux.find((p) => p.id == id)
+        alert("Item adicionado ao carrinho!")
 
         if (!item) {
             carrinhoAux.push({ id: id, qtd: 1 })

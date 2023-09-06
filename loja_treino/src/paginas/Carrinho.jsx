@@ -6,12 +6,14 @@ import '../estilos/Carrinho.css'
 
 function Carrinho() {
   const { carrinho } = useContext(CarrinhoContext)
+  const { limparCarrinho } = useContext(CarrinhoContext)
 
   if (carrinho.length > 0) {
     return (
       <div className="div-pai">
         {carrinho.map(p => <ItemCarrinho key={p.id} id={p.id} qtd={p.qtd} />)}
         <p>Total:{valorTotal()}</p>
+        <button type="button" onClick={() => limparCarrinho()}>Limpar Carrinho</button>
       </div>
     )
   } else {

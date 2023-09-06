@@ -41,7 +41,18 @@
     align-self: center;
 }
 
-.form-compra button {
+.l{
+    align-self: center;
+    width: 50%;
+}
+
+.botao-comprar {
+    padding: 7px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.botao-add-carrinho{
     padding: 7px;
     margin: 5px;
     width: 50%;
@@ -49,11 +60,13 @@
     border-radius: 10px;
 }
 
+
 .form-compra button:hover {
     background-color: #808083;
     color: white;
     cursor: pointer;
 }
+
 
 
 

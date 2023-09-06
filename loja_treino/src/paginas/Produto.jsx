@@ -21,7 +21,7 @@ const Produto = () => {
       <form className="form-compra">
         <h2>R${produto.preco}</h2>
         {selecao(produto)}
-        <button className="botao-comprar" type="button" onClick={() => addProdutoCarrinho(produto.id)}>Comprar</button>
+        <Link className="l" to="/carrinho"><button className="botao-comprar" type="button" onClick={() => addProdutoCarrinho(produto.id)}>Comprar</button></Link>
         <button className="botao-add-carrinho" type="button" onClick={() => addProdutoCarrinho(produto.id)}>Adicionar ao carrinho</button>
       </form>
     </div>
